@@ -1,0 +1,38 @@
+<body>
+<div class="wrapper">
+  <section class="clearfix">
+    <article class="one_fourth"></article>
+    <article class="one_half">
+
+        <h1>Register to join the great world of Terence!</h1>
+
+        <form action="/registration" method="post">
+          <fieldset>
+            <legend>Information:</legend>
+
+            <% if flash[:registration] %>
+              <p style="color: red"><%= flash[:registration] %></p><br>
+            <% end %>
+
+            Email <input type="text" name="email"><br><br>
+            Password <input type="password" name="password"><br>
+          </fieldset>
+          <br>
+          <button id="submit_button" type="submit">Register</button>
+
+          <h1>Login to see the great world of Terence!</h1>
+
+        <form action="/login" method="post">
+          Email: <br> <input class="form_width" type="text" name="email"><br>
+          Password: <br> <input class="form_width" type="password" name="password"><br><br>
+          <button id="login_button" type="submit">Login</button>
+        </form>
+
+    </article>
+    <article class="one_fourth"></article>
+
+  </section>
+
+
+</div>
+</body>
